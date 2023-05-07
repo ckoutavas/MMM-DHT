@@ -8,3 +8,6 @@ git pull https://github.com/ckoutavas/MMM-DHT
 cd MMM-DHT
 pip3 install -r requirements.txt
 ```
+
+## config
+
