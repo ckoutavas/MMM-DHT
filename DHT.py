@@ -16,4 +16,4 @@ def get_data(dht: adafruit_dht) -> Tuple[float, float]:
 
 
 temp, hum = get_data(adafruit_dht.DHT22(board.D4, use_pulseio=False))
-print(temp, hum)
+print(hum)
