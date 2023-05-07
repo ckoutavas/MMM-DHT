@@ -32,7 +32,7 @@ Module.register("MMM-DHT", {
   	socketNotificationReceived: function(notification, payload) {
 		switch (notification) {
 			case "dht":
-			    var humidity = payload
+			    var humidity = payload;
 			    // var temp = '70'
 				var e = document.getElementById("pi_dht");
 				if (parseFloat(humidity) <= this.config.lowRH) {
