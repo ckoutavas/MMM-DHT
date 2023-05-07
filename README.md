@@ -4,9 +4,9 @@ Uses DHT22 sensor to read temperature and humidity and display on your MagicMirr
 ## Install
 ```
 cd  ~/MagicMirror/modules
-git pull https://github.com/ckoutavas/MMM-DHT
-cd MMM-DHT
-pip3 install -r requirements.txt
+git clone https://github.com/ckoutavas/MMM-DHT
+cd
+sudo pip3 install -r requirements.txt
 ```
 
 ## config
