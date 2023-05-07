@@ -14,9 +14,11 @@ Module.register("MMM-DHT", {
   	},
 
   	getDom: function() {
-		var e = document.createElement("div")
-   		e.id = "pi_dht"
-		return e
+		var e = document.createElement("div");
+		var t = document.createElement("div");
+   		e.id = "pi_hum";
+   		t.id = "pi_temp"
+		return e, t
 	},
 
  	 notificationReceived: function(notification, payload, sender) {
@@ -32,9 +34,10 @@ Module.register("MMM-DHT", {
   	socketNotificationReceived: function(notification, payload) {
 		switch (notification) {
 			case "dht":
-			    var humidity = payload;
-			    // var temp = '70'
-				var e = document.getElementById("pi_dht");
+			    const arr = payload.split("-")
+			    humidity = arr[0]
+			    temp = arr[1]
+				var e = document.getElementById("pi_hum");
 				if (parseFloat(humidity) <= this.config.lowRH) {
 					e.style.color = this.config.lowColor;
 				} else if (parseFloat(humidity) >= this.config.highRH) {
@@ -42,14 +45,15 @@ Module.register("MMM-DHT", {
 				} else {
 					e.style.color = this.config.midColor;
 				}
-                /*
+				e.innerHTML =  humidity + "%";
+
+				var t = document.getElementById("pi_temp");
 				if (this.config.tempUnit === "C") {
 					temp = temp.toString() + "°C";
 				} else {
 					temp = (temp * (9/5) + 32).toFixed(1).toString() + "°F";
 				}
-				*/
-				e.innerHTML =  humidity + "% RH";
+				t.innerHTML = temp
 				break;
 		}
   	},

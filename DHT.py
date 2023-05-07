@@ -6,10 +6,9 @@ import adafruit_dht
 def get_data():
     dhtDevice = adafruit_dht.DHT22(board.D4, use_pulseio=False)
     try:
-        # temperature_c = dhtDevice.temperature
-        # temperature_f = temperature_c * (9/5) + 32
+        temperature_c = dhtDevice.temperature
         humidity = round(dhtDevice.humidity, 1)
-        print(humidity)
+        print(f'{humidity}-{temperature_c}')
     except RuntimeError:
         time.sleep(2)
         get_data()
