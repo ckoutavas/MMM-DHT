@@ -1,11 +1,11 @@
 Module.register("MMM-DHT", {
 	defaults: {
 	    tempUnit: "F",
-    	freq: 10000,
+    	freq: 60000,
     	highRH: 60,
     	lowRH: 50,
     	highColor: "red",
-    	lowColor: "yellow",
+    	lowColor: "red",
     	midColor: "green",
 	},
 

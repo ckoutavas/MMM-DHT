@@ -1,14 +1,18 @@
 import board
+import time
 import adafruit_dht
 
 
 def get_data():
-    dht = adafruit_dht.DHT22(board.D4, use_pulseio=False)
-    if dht.humidity and dht.humidity not in [None, 'None']:
-        humidity = round(dht.humidity, 1)
+    dhtDevice = adafruit_dht.DHT22(board.D4, use_pulseio=False)
+    try:
+        # temperature_c = dhtDevice.temperature
+        # temperature_f = temperature_c * (9/5) + 32
+        humidity = round(dhtDevice.humidity, 1)
         print(humidity)
-try:
-    get_data()
-except:
-    get_data()
+    except RuntimeError:
+        time.sleep(2)
+        get_data()
 
+
+get_data()
