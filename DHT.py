@@ -1,5 +1,3 @@
-import time
-from typing import Tuple
 import board
 import adafruit_dht
 
