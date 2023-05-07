@@ -11,7 +11,8 @@ def get_data(dht: adafruit_dht) -> Tuple[float, float]:
         humidity = round(dht.humidity, 1)
         if humidity:
             return humidity
-        else: get_data(adafruit_dht.DHT22(board.D4, use_pulseio=False))
+        else:
+            get_data(adafruit_dht.DHT22(board.D4, use_pulseio=False))
     except:
         time.sleep(2)
         get_data(adafruit_dht.DHT22(board.D4, use_pulseio=False))
