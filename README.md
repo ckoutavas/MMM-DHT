@@ -13,7 +13,7 @@ sudo pip3 install -r requirements.txt
 
 ## config
 
-```javasctip
+```
 {
   module: 'MMM-DHT',
   position: 'top_right',
