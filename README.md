@@ -35,7 +35,7 @@ sudo pip3 install -r requirements.txt
 | midColor   | str  | "green"    | Any html color name, hex, etc.      | The color used when the highValue < colorParam > lowVal                                        |
 
 ## css/custom.css
-You can style to temperature string that is returned by updating your `css/custom.css` file
+You can style the temperature string that is returned by updating your `css/custom.css` file
 
 ```
 #dht_temp {
