@@ -1,5 +1,5 @@
 # MMM-DHT
-Uses a DHT22 sensor to read the temperature and humidity, and display on your MagicMirror2. If you are using another sensor you will need to modify the `DHT.py` file 
+Uses a DHT22 sensor to read the temperature and humidity, and display one or both on your MagicMirror2. If you are using another sensor you will need to modify the `DHT.py` file 
 
 ## DHT22 Wiring
 ![img.png](img.png)
