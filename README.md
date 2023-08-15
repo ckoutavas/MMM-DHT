@@ -8,6 +8,7 @@ Uses a DHT22 sensor to read the temperature and humidity, and display one or bot
 ```
 cd  ~/MagicMirror/modules
 git clone https://github.com/ckoutavas/MMM-DHT
+cd /MMM-DHT
 sudo pip3 install -r requirements.txt
 ```
 
