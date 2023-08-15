@@ -35,8 +35,8 @@ Module.register("MMM-DHT", {
 		switch (notification) {
 			case "dht":
 			    const arr = payload.split("-")
-			    humidity = arr[0]
-			    temperature = arr[1]
+			    temperature = arr[0]
+			    humidity = arr[1]
                 // convert temp based on tempUnit param
 			    if (this.config.tempUnit === "C") {
 					temp = temperature + "°C";
